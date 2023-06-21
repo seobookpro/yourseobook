@@ -124,4 +124,28 @@ Integrate Google Ad Manager quickly to effectively manage and serve ads on your 
 
 Your SEO Book is a comprehensive and customizable WordPress theme designed to enhance your business's online presence. With its extensive range of features, responsive layouts, and SEO-friendly design, this theme provides the tools you need to create a professional and engaging website. Take advantage of the theme's flexibility and simplify the setup process for your company website. Explore the documentation for detailed instructions on utilizing the various features and maximizing the potential of Your SEO Book.
 
+### Visit our website below to read more about the Project 
+<p><a href="https://nightly.seobookpro.com/" target="_blank" rel="bookmark" title="SEO Book Pro - Alpha 0.0.9 - Nightly">SEO Book Pro</a>
+<h2>Follow SEO Book Pro on</h2>
+<ul>
+<li>Facebook: https://www.facebook.com/ProSEOBook/</li>
+<li>Twitter: https://twitter.com/seobookpro</li>
+<li>Reddit: https://www.reddit.com/user/seobookpro</li>
+<li>LinkedIn: https://www.linkedin.com/showcase/seo-book-pro/</li>
+<li>Quora: https://www.quora.com/profile/Seo-Book-Pro</li>
+<li>WebArchive: https://archive.org/details/@seobookpro</li>
+<li>Mix: https://mix.com/seobookpro</li>
+<li>Medium: https://medium.com/@seobookpro</li>
+<li>Pinterest: https://www.pinterest.co.uk/seobookpro/</li>
+</ul>
+
+<p><blockquote>
+If you've enjoyed our SEO Book Pro project, find us on <a href="https://www.patreon.com/seobookpro?" title="" target="_blank" rel="bookmark">#Patreon</a>. 
+</blockquote></p>
+
+<p>Thanks to every supporter which makes an important contribution to helping our project to go #live #beta v1.0.0 and everyone can enjoy all the functions and customizations with the Free version and the Pro version of SEO Book Pro! Thank you so much to everyone supporting us on patreon.com</p>
+## Become a patron below:
+
+<section>Patreon Support: <a href="https://www.patreon.com/seobookpro?fan_landing=true" target="_blank" title="SEO Book Pro | Out of the Box SEO and Website/s Audit Tools">SEO Book Pro | Out of the Box SEO and Website/s Audit Tools</a></section>
+
 ### Go to [SEO Book Pro Wiki Page](https://github.com/seobookpro/yourseobook/wiki)
