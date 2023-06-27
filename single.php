@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<div class="container-fluid" style="background:#ccc;">
+<div class="container-fluid" style="background:#ccc;color:#000;">
 
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row align-items-start g-5 py-5 land-about">
