@@ -1,6 +1,6 @@
 # Your SEO Book WordPress Custom Theme
 
-> Version: Beta 1.0.14
+> Version: Beta 1.0.26
 
 Welcome to the documentation for Your SEO Book, a custom WordPress theme designed specifically for businesses and business services. This theme offers a range of features and functionalities to help you showcase your business services online effectively. Whether you are a small startup or a well-established company, Your SEO Book provides easy management and a straightforward setup process, even for users without coding skills.
 
