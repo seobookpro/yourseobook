@@ -2,7 +2,7 @@
 
 <?php // if (get_theme_mod('yourseobook_header_main_navigation_master_menu_style_settings_sections')) : ?>
 
-<div class="container-fluid above-the-fold" style="margin:50px auto;">
+<div class="container-fluid above-the-fold">
 
   <div class="container col-xxl-8 px-4 py-5 atftc">
     <div class="row atf">
@@ -57,8 +57,11 @@
           </section>
 
 <div class="tinymce atf-paragraph">
-
-<?php echo apply_filters( 'the_content', get_theme_mod('yourseobook_main_land_above_the_fold_text_content_section_tinymce_editor_settings')); ?>
+<h3 style="animation: fadeIn 1s ease-in-out 2.8s; font-size: 34px; font-weight: 500;color:rgb(255, 255, 255);margin:20px 0px 60px 0px;display: block;animation-fill-mode:both;">Check the Demo</h3>
+<ul>
+<li>username : demo</li>
+<li>password: demo</li>
+</ul>
 </div>
 <div class="tinymce">
 
