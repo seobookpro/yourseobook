@@ -1,6 +1,6 @@
 <?php if ( get_theme_mod( 'yourseobook_main_land_about_us_display_control' ) ) : ?>
 
-<div class="container-fluid" style="background:#ccc;">
+<div class="container-fluid" id="aboutus">
 
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5 land-about">
@@ -10,6 +10,7 @@
       <div class="col-10 col-sm-8 col-lg-6">
         <img src="https://seobookpro.com/img/2023/03/Screenshot-2023-03-23-at-12.19.12-e1679778361359.png" class="d-block mx-lg-auto img-fluid" alt="SEO Book Pro" width="700" height="500" loading="lazy">
       </div>
+<?php echo apply_filters( 'the_content', get_theme_mod('yourseobook_main_land_below_the_fold_content_tinymce_editor')); ?>
 
 
       <div class="col-lg-6">

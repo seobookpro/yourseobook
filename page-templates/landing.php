@@ -5,6 +5,8 @@
 <?php if ( get_theme_mod( 'yourseobook_main_land_display_control' ) ) : ?>
 
 <div class="main-land">
+
+<?php include (TEMPLATEPATH . '/design/landing/breaking-news.php');?>
   <?php // include (TEMPLATEPATH . '/design/landing/jump-links.php');?>
   <?php include (TEMPLATEPATH . '/design/landing/above-the-fold.php');?>
   <?php include (TEMPLATEPATH . '/design/landing/below-the-fold.php');?>
@@ -18,7 +20,7 @@
   <?php include (TEMPLATEPATH . '/design/landing/gallery.php');?>
   <?php include (TEMPLATEPATH . '/design/landing/videos.php');?>
   <?php include (TEMPLATEPATH . '/design/landing/user-testimonials.php');?>
-  <?php // include (TEMPLATEPATH . '/design/landing/logos-slider.php');?>
+  <?php include (TEMPLATEPATH . '/design/landing/logos-slider.php');?>
 
 
 </div>

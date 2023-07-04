@@ -1,7 +1,7 @@
 <div class="container-fluid footer-copy">
 <div class="container">
   <footer class="py-5">
-    <div class="row" style="justify-content: space-between;">
+    <div class="row">
 
 <?php if ( get_theme_mod( 'yourseobook_footer_navigation_fws1_display_control' ) ) : ?>
       <div class="col col-md-3 col-sm-6">

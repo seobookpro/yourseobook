@@ -1,7 +1,26 @@
 <?php
 
+if ( ! function_exists( 'yourseobook_scripts_styles' ) ) {
+	function yourseobook_scripts_styles() {
+		// Register and enqueue our icon font
+		// We're using the awesome Font Awesome icon font. http://fortawesome.github.io/Font-Awesome
+		wp_register_style( 'fontawesome', trailingslashit( get_template_directory_uri() ) . 'css/fontawesome-all.min.css');
+		wp_enqueue_style( 'fontawesome' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'yourseobook_scripts_styles' );
+add_action( 'customize_controls_print_styles', 'yourseobook_scripts_styles' );
 
 
+
+if ( ! function_exists( 'yourseobook_get_credits' ) ) {
+	function yourseobook_get_credits() {
+		$defaults = yourseobook_generate_defaults();
+
+		// wpautop this so that it acts like the new visual text widget, since we're using the same TinyMCE control
+		return wpautop( get_theme_mod( 'sample_tinymce_editor', $defaults['sample_tinymce_editor'] ) );
+	}
+}
 
 
 if ( ! function_exists( 'yourseobook_generate_defaults' ) ) {
@@ -66,6 +85,9 @@ if ( ! function_exists( 'yourseobook_generate_defaults' ) ) {
 			'sample_date_only' => '2017-08-28',
 			'sample_date_time' => '2017-08-28 16:30:00',
 			'sample_date_time_no_past_date' => date( 'Y-m-d' ),
+// Default Control Settings for Below the Fold Controls
+                                                             'ml_btf_background' => '#000000',
+                                                             'ml_btf_heading_title_color' => '#ffffff',
 		);
 
 		return apply_filters( 'yourseobook_customizer_defaults', $customizer_defaults );

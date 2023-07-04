@@ -143,34 +143,3 @@ $wp_customize->selective_refresh->add_partial( 'yourseobook_general_sitewide_bra
 
 
 
-
-
-                    $wp_customize->add_setting( 'yourseobook_main_land_above_the_fold_text_content_section_tinymce_editor_settings', array(
-                      // 'default' => $this->defaults['sample_tinymce_editor'],
-                       'transport' => 'refresh',
-                       'sanitize_callback' => 'wp_kses_post'
-                    ) );
-
-                    $wp_customize->add_control( new Yourseobook_TinyMCE_Custom_control( $wp_customize, 'yourseobook_main_land_above_the_fold_text_content_section_tinymce_editor_settings', array(
-                        'label' => __( 'ATF Text Content', 'yourseobook' ),
- // 'active_callback' => 'yourseobook_main_land_above_the_fold_text_content_section_tinymce_editor_settings_callback',
-
-                        'section' => 'yourseobook_brand_sections',
-                        //'type' => 'textarea',
-'input_attrs' => array(
-'menubar' => true,
-                    'toolbar1' => 'formatselect bold numlist bullist link wp_adv',
-                    'toolbar2' => 'redo undo italic underline alignleft aligncenter alignright forecolor blockquote outdent indent',
-                    'mediaButtons' => false,
-'teeny' => true,
-                                                                                                        ),
-                    ) ) );
-
-		$wp_customize->selective_refresh->add_partial( 'yourseobook_main_land_above_the_fold_text_content_section_tinymce_editor_settings',
-			array(
-				'selector' => '.atf-paragraph',
-				/*'container_inclusive' => true,
-				'render_callback' => 'yourseobook_main_land_above_the_fold_text_content_section_tinymce_editor_settings_callback',
-				'fallback_refresh' => false,*/
-			)
-		);

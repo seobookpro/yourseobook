@@ -442,3 +442,36 @@ $wp_customize->add_control( new Yourseobook_Slider_Custom_Control( $wp_customize
 ) );
 
 
+// yourseobook_header_navigation_menu_search_bar_border_type
+
+
+		$wp_customize->add_setting( 'yourseobook_header_navigation_menu_search_bar_border_type',
+			array(
+				// 'default' => $this->defaults['sample_dropdown_select2_control_single'],
+				'transport' => 'refresh',
+				'sanitize_callback' => 'yourseobook_text_sanitization'
+			)
+		);
+		$wp_customize->add_control( new yourseobook_Dropdown_Select2_Custom_Control( $wp_customize, 'yourseobook_header_navigation_menu_search_bar_border_type',
+/*			array(
+				
+                                                                                 'label' => __( 'Footer Links Text Decoration', 'yourseobook' ),
+				'section' => 'yourseobook_main_footer_navigation_menus_sections',
+				'input_attrs' => array(
+					'placeholder' => __( 'Please select option...', 'yourseobook' ),
+					'multiselect' => false,
+				),
+				'choices' => array(
+					'none' => __( 'none', 'yourseobook' ),
+					'underline' => __( 'underline', 'yourseobook' ),
+					'overline red' => __( 'overline red', 'yourseobook' ),
+					'inherit' => __( 'inherit', 'yourseobook' ),
+					'initial' => __( 'initial', 'yourseobook' ),
+					'revert' => __( 'revert', 'yourseobook' ),
+					'revert-layer' => __( 'revert-layer', 'yourseobook' ),
+					'unset' => __( 'unset', 'yourseobook' ),
+				
+				)
+			)
+*/
+		) );

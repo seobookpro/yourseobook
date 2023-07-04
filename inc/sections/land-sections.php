@@ -10,9 +10,19 @@ $wp_customize->add_section( 'yourseobook_land_sections',
  )
 );
 
+$wp_customize->add_section(
+    'yourseobook_land_breaking_news_sections',
+    array(
+        'priority'    => 3,
+        'panel'       => 'yourseobook_main_land_panel',
+        'title'       => esc_html__('Breaking News Settings', 'yourseobook'),
+        'menu_icon'   => 'dashicons dashicons-location-alt'
+    )
+);
+
 $wp_customize->add_section( 'yourseobook_land_above_the_fold_style_sections',
  array(
-    'priority' => 3,
+    'priority' => 4,
    'title' => __( 'Above The Fold Styles', 'yourseobook' ),
    'panel' => 'yourseobook_main_land_above_the_fold_styles_panel'
  )
@@ -20,7 +30,7 @@ $wp_customize->add_section( 'yourseobook_land_above_the_fold_style_sections',
 
 $wp_customize->add_section( 'yourseobook_land_above_the_fold_sections',
  array(
-   'priority' => 2,
+   'priority' => 3,
    'title' => __( 'Above The Fold Settings', 'yourseobook' ),
    'panel' => 'yourseobook_main_land_panel'
  )
@@ -30,7 +40,7 @@ $wp_customize->add_section( 'yourseobook_land_below_the_fold_sections',
  array(
   //  'priority' => 2,
    'title' => __( 'Below The Fold Settings', 'yourseobook' ),
-   'panel' => 'yourseobook_main_land_panel'
+   'panel' => 'yourseobook_main_land_below_the_fold_styles_panel'
  )
 );
 

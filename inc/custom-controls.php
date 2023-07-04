@@ -598,8 +598,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			 */
 			public function to_json() {
 				parent::to_json();
-				$this->json['yourseobooktinymcetoolbar1'] = isset( $this->input_attrs['toolbar1'] ) ? esc_attr( $this->input_attrs['toolbar1'] ) : 'chatgpt-button bold italic bullist numlist alignleft aligncenter alignright link';
-				$this->json['yourseobooktinymcetoolbar2'] = isset( $this->input_attrs['toolbar2'] ) ? esc_attr( $this->input_attrs['toolbar2'] ) : 'redo undo italic underline alignleft aligncenter alignright forecolor blockquote outdent indent';
+				$this->json['yourseobooktinymcetoolbar1'] = isset( $this->input_attrs['toolbar1'] ) ? esc_attr( $this->input_attrs['toolbar1'] ) : 'formatselect bold italic bullist numlist alignleft aligncenter alignright link wp_adv';
+				$this->json['yourseobooktinymcetoolbar2'] = isset( $this->input_attrs['toolbar2'] ) ? esc_attr( $this->input_attrs['toolbar2'] ) : 'redo undo underline forecolor blockquote outdent indent';
 				$this->json['yourseobookmediabuttons'] = isset( $this->input_attrs['mediaButtons'] ) && ( $this->input_attrs['mediaButtons'] === true ) ? true : false;
 			}
 			/**
@@ -609,14 +609,13 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			?>
 
 
-				<div class="tinymce-control">
-
-					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<?php if( !empty( $this->description ) ) { ?>
-						<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
-					<?php } ?>
-					<textarea id="<?php echo esc_attr( $this->id ); ?>" class="customize-control-tinymce-editor" <?php $this->link(); ?>><?php echo esc_html( $this->value() ); ?></textarea>
-				</div>
+			<div class="tinymce-control">
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<?php if( !empty( $this->description ) ) { ?>
+					<span class="customize-control-description"><?php echo esc_html( $this->description ); ?></span>
+				<?php } ?>
+				<textarea id="<?php echo esc_attr( $this->id ); ?>" class="customize-control-tinymce-editor" <?php $this->link(); ?>><?php echo esc_attr( $this->value() ); ?></textarea>
+			</div>
 			<?php
 			}
 		}
@@ -929,10 +928,11 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		}
 		/**
 		 * Enqueue our scripts and styles
+
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'yourseobook-custom-controls-css', $this->get_yourseobook_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
-			wp_enqueue_script( 'wp-color-picker-alpha', $this->get_yourseobook_resource_url() . 'js/wp-color-picker-alpha.js', array( 'wp-color-picker' ), '1.0', true );
+			wp_enqueue_style( 'yourseobook-custom-controls-css', $this->get_yourseobook_resource_url() . 'inc/assets/css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'wp-color-picker-alpha', $this->get_yourseobook_resource_url() . 'inc/assets/js/wp-color-picker-alpha.js', array( 'wp-color-picker' ), '1.0', true );
 			wp_enqueue_style( 'wp-color-picker' );
 		}
 		/**
@@ -1000,8 +1000,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 		 * Enqueue our scripts and styles
 		 */
 		public function enqueue() {
-			wp_enqueue_script( 'yourseobook-custom-controls-js', $this->get_yourseobook_resource_url() . 'js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.1', true );
-			wp_enqueue_style( 'yourseobook-custom-controls-css', $this->get_yourseobook_resource_url() . 'css/customizer.css', array(), '1.0', 'all' );
+			wp_enqueue_script( 'yourseobook-custom-controls-js', $this->get_yourseobook_resource_url() . 'inc/assets/js/customizer.js', array( 'jquery', 'jquery-ui-core' ), '1.1', true );
+			wp_enqueue_style( 'yourseobook-custom-controls-css', $this->get_yourseobook_resource_url() . 'inc/assets/css/customizer.css', array(), '1.0', 'all' );
 		}
 		/**
 		 * Render the control in the customizer

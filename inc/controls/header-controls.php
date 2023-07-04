@@ -20,51 +20,6 @@ $wp_customize->selective_refresh->add_partial( 'yourseobook_header_main_navigati
     'selector' => '#thm', // You can also select a css class
 ) );
 
-$wp_customize->add_setting( 'yourseobook_header_main_navigation_brand_logo_display_control',
-  array(
-    //'default' => $this->defaults['search_menu_icon'],
-    'transport' => 'refresh',
-    'sanitize_callback' => 'yourseobook_switch_sanitization'
-  )
-);
-
-$wp_customize->add_control( new Yourseobook_Toggle_Switch_Custom_control( $wp_customize, 'yourseobook_header_main_navigation_brand_logo_display_control',
-  array(
-    'label' => __( 'Logo Section Settings', 'yourseobook' ),
-    'section' => 'yourseobook_main_header_navigation_brand_logo_sections',
-    'description' => esc_html__( 'Show or Hide The Main Brand Logo Section on the Main Header Navigation Menu', 'yourseobook' )
-  )
-) );
-
-$wp_customize->selective_refresh->add_partial( 'yourseobook_header_main_navigation_brand_logo_display_control', array(
-    'selector' => '.brandlogosection', // You can also select a css class
-) );
-
-// Start Settings to Show Hide Brand Image Logo
-$wp_customize->add_setting( 'yourseobook_header_main_navigation_brand_logo_image_display_control',
-  array(
-    //'default' => $this->defaults['search_menu_icon'],
-    'transport' => 'refresh',
-    'sanitize_callback' => 'yourseobook_switch_sanitization'
-  )
-);
-
-
-$wp_customize->add_control( new Yourseobook_Toggle_Switch_Custom_control( $wp_customize, 'yourseobook_header_main_navigation_brand_logo_image_display_control',
-  array(
-    'label' => __( 'Display Brand Logo Image', 'yourseobook' ),
-    'section' => 'yourseobook_main_header_navigation_brand_logo_sections',
-    'description' => esc_html__( 'Show or Hide The Main Brand Logo Image on the Main Header Navigation Menu', 'yourseobook' )
-  )
-) );
-
-$wp_customize->selective_refresh->add_partial( 'yourseobook_header_main_navigation_brand_logo_image_display_control', array(
-    'selector' => '.brandlogoimage', // You can also select a css class
-) );
-// End Settings to Show Hide Brand Image Logo
-
-
-
 // Start Settings to Show Hide Brand Image Text
 $wp_customize->add_setting( 'yourseobook_header_main_navigation_brand_logo_text_display_control',
   array(
@@ -132,11 +87,90 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'your
   )
 ) );
 
+// Brand Logo Image Header Menu Navigation Settings
+
+$wp_customize->add_setting( 'yourseobook_header_main_navigation_brand_logo_display_control',
+  array(
+    //'default' => $this->defaults['search_menu_icon'],
+    'transport' => 'refresh',
+    'sanitize_callback' => 'yourseobook_switch_sanitization'
+  )
+);
+
+$wp_customize->add_control( new Yourseobook_Toggle_Switch_Custom_control( $wp_customize, 'yourseobook_header_main_navigation_brand_logo_display_control',
+  array(
+    'label' => __( 'Logo Section Settings', 'yourseobook' ),
+    'section' => 'yourseobook_main_header_navigation_brand_logo_sections',
+    'description' => esc_html__( 'Show or Hide The Main Brand Logo Section on the Main Header Navigation Menu', 'yourseobook' )
+  )
+) );
+
+$wp_customize->selective_refresh->add_partial( 'yourseobook_header_main_navigation_brand_logo_display_control', array(
+    'selector' => '.brandlogosection', // You can also select a css class
+) );
+
+// Start Settings to Show Hide Brand Image Logo
+$wp_customize->add_setting( 'yourseobook_header_main_navigation_brand_logo_image_display_control',
+  array(
+    //'default' => $this->defaults['search_menu_icon'],
+    'transport' => 'refresh',
+    'sanitize_callback' => 'yourseobook_switch_sanitization'
+  )
+);
 
 
+$wp_customize->add_control( new Yourseobook_Toggle_Switch_Custom_control( $wp_customize, 'yourseobook_header_main_navigation_brand_logo_image_display_control',
+  array(
+    'label' => __( 'Display Brand Logo Image', 'yourseobook' ),
+    'section' => 'yourseobook_main_header_navigation_brand_logo_sections',
+    'description' => esc_html__( 'Show or Hide The Main Brand Logo Image on the Main Header Navigation Menu', 'yourseobook' )
+  )
+) );
 
 
+// End Settings to Show Hide Brand Image Logo
 
+$wp_customize->add_setting( 'yourseobook_header_logo_default_image_width',
+  array(
+    'default' => '40px',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'wp_filter_nohtml_kses'
+  )
+);
+$wp_customize->add_control( 'yourseobook_header_logo_default_image_width',
+  array(
+     'label' => __( 'Logo Image Width (px)', 'yourseobook' ),
+     'section' => 'yourseobook_main_header_navigation_brand_logo_sections',
+    'type' => 'number',
+    'input_attrs' => array(
+      'min' => '30px',
+      'max' => '60px',
+      'step' => '1px',
+    ),
+  )
+ );
+$wp_customize->selective_refresh->add_partial( 'yourseobook_header_logo_default_image_width', array(
+    'selector' => '#brandlogo', // You can also select a css class
+) );
+$wp_customize->add_setting( 'yourseobook_header_logo_default_image_height',
+  array(
+    'default' => '40px',
+    'transport' => 'refresh',
+    'sanitize_callback' => 'wp_filter_nohtml_kses'
+  )
+);
+$wp_customize->add_control( 'yourseobook_header_logo_default_image_height',
+  array(
+     'label' => __( 'Logo Image Height (px)', 'yourseobook' ),
+     'section' => 'yourseobook_main_header_navigation_brand_logo_sections',
+'type' => 'number',
+    'input_attrs' => array(
+      'min' => '30px',
+      'max' => '60px',
+      'step' => '1px',
+    ),
+  )
+ );
 // Start Main Header Navigation Menu Background Color Settings
 
 $wp_customize->add_setting( 'yourseobook_header_main_navigation_master_menu_style_settings_color', array(
