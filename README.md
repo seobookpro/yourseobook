@@ -307,3 +307,7 @@ If you've enjoyed our SEO Book Pro project, find us on <a href="https://www.patr
 <section>Patreon Support: <a href="https://www.patreon.com/seobookpro?fan_landing=true" target="_blank" title="SEO Book Pro | Out of the Box SEO and Website/s Audit Tools">SEO Book Pro | Out of the Box SEO and Website/s Audit Tools</a></section>
 
 ### Go to [SEO Book Pro Wiki Page](https://github.com/seobookpro/yourseobook/wiki)
+
+## Lateest Updates Beta v.1.0.33 Features and Updates
+<p>Customizer Single Page Panel Section with Controllers to Manage and Setup the Single Page Layout and the Displayed Div HTML Elements</p>
+
