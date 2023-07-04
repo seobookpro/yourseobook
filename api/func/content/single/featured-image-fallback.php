@@ -13,7 +13,7 @@
 <figure class="figure">
 <img src="<?php echo $url ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?> | <?php echo esc_html( $brand_name ); ?>" class="sp-feat-img" id="feat-img" loading="lazy"/>
 <button class="featimgopen" data-bs-toggle="collapse" data-bs-target="#feat-img-collapse" aria-expanded="false">
- <span class="dashicons dashicons-media-interactive"></span>
+<span class="dashicons dashicons-media-interactive"></span>
 <span class="dashicons dashicons-arrow-down-alt2"></span>
         </button>
 
