@@ -24,5 +24,154 @@ nav.master-header-nav-menu ul li a {
 }
 body.logged-in form#customize-controls.wp-full-overlay-sidebar { background: red !important; width: 500px !important; }
 
+code.pre-codes {
+	white-space: break-spaces;
+	font-size: 14px;
+	line-height: 1rem;
+	font-weight: 600;
+	color: #fff;
+	margin: 40px 0px 40px 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: space-evenly;
+	align-items: stretch;
+	border-left: 5px solid #000 !important;
+	padding: 20px 20px 20px 30px;
+	border: 1px solid #000;
+	box-shadow: 0px 35px 20px -30px #000;
+ background: #000 !important;
+}
+#single-page-section h2, #single-page-section h3, #single-page-section h4 {
+	margin: 30px 0px 30px 0px;
+	border-bottom: 2px ridge skyblue;
+	padding: 15px 10px 15px 0px;
+	font-weight: 500;
+	text-transform: capitalize;
+	box-shadow: 0px 30px 20px -30px #000;
+	color: #012330;
+}
+
+#single-page-section h2{
+font-size: 36px;
+}
 
 
+#single-page-section h3{
+font-size: 30px;
+}
+
+
+#single-page-section h4{
+font-size: 26px;
+}
+
+div#single-page-section {
+	font-size: 16px;
+	line-height: 1.75rem;
+	color: #012330;
+	font-weight: 300;
+}
+
+div#single-page-section strong {
+	font-weight: 600;
+	color: #012330;
+}
+
+
+/* Table of Contents Hamburger Menu to Open the Table Of Contents Section */
+.dropbtn {
+    background: none;
+    padding: 0px;
+    border: none;
+    position: relative;
+    left: 0px;
+}
+.hamburger {
+        /*! max-width: 43px; */
+        /*! max-height:43px; */
+
+        /*! position: relative; */
+        /*! left: 0; */
+        /*! top: 0; */
+        /*! z-index: 1035; */
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+margin-top: 0px;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: scroll; /* Disable horizontal scroll */
+  padding-top: 100px; /* Place content 60px from the top */
+
+}
+.shown {
+  display: block;
+  min-width: 250px;
+margin-top: 0px;
+  min-height: 100%;
+  position: fixed !important;
+  background: #000 !important;
+  padding: 90px 10px 0px 10px !important;
+    scrollbar-width: thin;
+    overflow-x: hidden !important;
+  z-index: 99999999 !important;
+  scrollbar-color: #f00 #000;
+  left: 0 !important;
+  overflow-y: scroll; /* Disable horizontal scroll */
+}
+.bar1, .bar2, .bar3{
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45s);
+}
+
+#spsdc ul {
+list-style: none;
+padding: 0px;
+margin: 20px 0px 20px 0px;
+font-weight: 400;
+}
+#spsdc ul li a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 400;
+}
+#spsdc ul li {
+        border-bottom: 1px dotted #000;
+        margin: 0px 0px 10px 0px;
+        padding: 10px 0px 10px 0px;
+}
+#spsdc ul li .post-date {
+        font-size: 12px;
+        color: #000;
+        display: flex;
+        font-weight: 500;
+        text-align: right !important;
+        max-width: fit-content;
+        margin: 0px auto;
+        flex-direction: column;
+        border: 1px solid #000;
+        padding: 4px;
+        flex-flow: ;
+}
