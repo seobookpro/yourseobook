@@ -311,3 +311,27 @@ If you've enjoyed our SEO Book Pro project, find us on <a href="https://www.patr
 ## Lateest Updates Beta v.1.0.33 Features and Updates
 <p>Customizer Single Page Panel Section with Controllers to Manage and Setup the Single Page Layout and the Displayed Div HTML Elements</p>
 
+## SEO Book Pro - Customizer Tree Panel Sections
+
+### Pro Version Settings Panel
+### General Buttons Settings
+### Header Navigation Menu
+### Landing Page Settings
+### Single Page Panel
+### Below the Fold Styles Settings
+### Footer Navigation Menu
+### Brand Website Settings
+### Landing SEO Settings
+### Google Stack Scripts Panel
+### Header Nav Menu Section
+### Main Footer Sections Settings
+### General SEO Panel
+### Advanced Custom Post Types
+### JSON-LD Schemas | Rich Snippets
+### Site Identity
+### Menus
+### Widgets
+### Homepage Settings
+### Additional CSS
+
+## The Offical Full list with The Lastest Stable version of the Your SEO Book Custom WordPress Theme from Scratch by <a href="https://github.com/seobookpro/" title="Github Official SEO Book Pro Dashboard" role="link" rel="bookmark" type="link" target="_blank">SEO Book Pro</a>
