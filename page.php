@@ -1,10 +1,10 @@
 <?php get_header();?>
 
 
-<div class="container-fluid single-page-template" style="margin:90px auto;padding: 0px;">
+<div class="container-fluid single-page-template" style="margin:0px auto !important;padding: 0px 0px 0px 0px;">
 
-<div class="container" style="padding: 90px 0px 90px 0px;">
-  <div class="row" style="margin:0px auto;padding: 0px 15px 0px 15px;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: space-between;align-content: stretch;">
+<div class="container" style="padding: 90px 20px 90px 0px;">
+  <div class="row" style="margin:0px auto;padding: 0px 0px 0px 0px;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: space-between;align-content: stretch;">
 
 
 <div id="single-page-section" class="col-sm-8 col-md-8" style="margin:0px 0px 30px 0px;border-bottom: 1px dotted #000;padding: 0px 0px 40px 0px;">
@@ -23,7 +23,7 @@
 </div>-->
 <?php // } else{ };?>
 
- <header id="headertitle">
+ <header id="headertitle" style="white-space: normal;width:100%;display:inline-block;">
 
 <h1 class="single-page-header-title">
   <?php
@@ -49,8 +49,15 @@
 
 <?php echo yourseobook_generate_table_of_contents(); ?>
 
-
-            <?php get_the_content(); ?>
+<?php $content = apply_filters('the_content', get_the_content());
+$content = explode("</h3>", $content, 2);
+// var_dump($content); // debug
+echo $content[0].'</h3>';
+echo '';
+if (!empty($content[1])) {
+  echo $content[1];
+} ?>
+            <?php // get_the_content(); ?>
 
 <?php yourseobook_set_post_views(get_the_ID());?>
 
@@ -58,19 +65,48 @@
 
  <footer>
 <hr>
-  <?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-meta.php');?>
 
+<?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-meta.php');?>
+<?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-share-buttons.php');?>
+<?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-author.php');?>
+
+<style>
+div#mySidenav .sidenav.shown ul {
+	list-style: circle;
+	padding: 10px;
+}
+
+.shown ul li a {
+	color: #fff;
+	text-align: left;
+	text-decoration: none;
+	font-weight: 400;
+	margin: 10px 0px 10px 0px;
+	display: inline-block;
+	border: 1px dotted #fff;
+	padding: 5px;
+	font-size: 12px;
+	line-height: 1.15rem;
+}
+</style>
  </footer>
 </article>
 
 <?php endwhile; else : ?>
 
 <?php endif; ?>
+
+<div class="navigation">
+
+<?php previous_post_link(); ?>    <?php next_post_link(); ?>
+
+</div>
 </div>
 
  <?php if ( get_theme_mod( 'yourseobook_single_page_sidebar_display_control' ) ) : ?>
 <div id="spsdc" class="col-sm-3 col-md-3">
 <aside>
+
 <?php if ( is_active_sidebar( 'yourseobook_single_page_right_sidebar' ) ) : ?>
 		<?php dynamic_sidebar( 'yourseobook_single_page_right_sidebar' ); ?>
 <?php endif; ?>
@@ -79,6 +115,14 @@
 <?php endif; ?>
 
  </div>
+
  </div>
  </div>
+ <?php if ( get_theme_mod( 'yourseobook_single_page_cta_sticky_socials_display_control' ) ) : ?>
+<?php include (TEMPLATEPATH . '/design/engage/call-to-actions/sticky-socials.php');?>
+<?php endif; ?>
+ <?php if ( get_theme_mod( 'yourseobook_single_page_cta_footer_pop_up_display_control' ) ) : ?>
+<?php include (TEMPLATEPATH . '/design/engage/call-to-actions/footer-pop-up.php');?>
+<?php include (TEMPLATEPATH . '/design/engage/call-to-actions/free-website-audit.php ');?>
+<?php endif; ?>
 <?php get_footer();?>

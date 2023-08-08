@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 
-<div class="container-fluid single-page-template" style="margin:0px auto;padding: 0px;">
+<div class="container-fluid single-page-template" style="margin:90px auto;padding: 0px;">
 
 <div class="container" style="padding: 90px 0px 90px 0px;">
   <div class="row" style="margin:0px auto;padding: 0px 15px 0px 15px;display: flex;flex-wrap: wrap;flex-direction: row;justify-content: space-between;align-content: stretch;">
@@ -16,12 +16,7 @@
 
 <article>
 
-<?php // if ( is_user_logged_in() ) {;?>
-<!--<div style="position:fixed;max-width:100px;max-height:100px;background:#F00;top:50%;right:0;s">
-<button class="btn btn-dark customize-unpreviewable" href="<?php // echo home_url(); ?>/wp-admin/post.php?post=<?php // the_ID(); ?>&action=edit" title="" role="contentinfo" type="button" title="<?php // the_title(); ?> - Edit This Page "><span class="dashicons dashicons-edit-page"></span></button>
-<a class="btn btn-dark" href="<?php // echo home_url(); ?>/wp-admin/customize.php?url=<?php // echo get_the_permalink(); ?>" title="" role="contentinfo" type="button">Live Customize Edit</a>
-</div>-->
-<?php // } else{ };?>
+
 
  <header id="headertitle">
 
@@ -50,7 +45,7 @@
 <?php echo yourseobook_generate_table_of_contents(); ?>
 
 
-            <?php get_the_content(); ?>
+            <?php the_content(); ?>
 
 <?php yourseobook_set_post_views(get_the_ID());?>
 
@@ -58,10 +53,11 @@
 
  <footer>
 <hr>
+
 <?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-meta.php');?>
 <?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-share-buttons.php');?>
 <?php include (TEMPLATEPATH . '/design/content/meta/sp/single-page-bottom-author.php');?>
-  <?php include (TEMPLATEPATH . '/design/content/meta/sp/single-post-bottom-related-posts.php');?>
+
 
  </footer>
 </article>
@@ -69,11 +65,22 @@
 <?php endwhile; else : ?>
 
 <?php endif; ?>
+<p>Written by:
+<?php the_author_posts_link(); ?></p>
+<?php
+$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
+?>
+<p>This is <?php echo $curauth->nickname; ?>'s page</p>
 </div>
 
  <?php if ( get_theme_mod( 'yourseobook_single_page_sidebar_display_control' ) ) : ?>
 <div id="spsdc" class="col-sm-3 col-md-3">
 <aside>
+<div class="bg-success p-2 text-white">This is default success background</div>
+<div class="bg-success p-2 text-white bg-opacity-75">This is 75% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-50">This is 50% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-25">This is 25% opacity success background</div>
+<div class="bg-success p-2 text-dark bg-opacity-10">This is 10% opacity success background</div>
 <?php if ( is_active_sidebar( 'yourseobook_single_page_right_sidebar' ) ) : ?>
 		<?php dynamic_sidebar( 'yourseobook_single_page_right_sidebar' ); ?>
 <?php endif; ?>
@@ -82,7 +89,6 @@
 <?php endif; ?>
 
  </div>
-
  </div>
  </div>
 <?php get_footer();?>
