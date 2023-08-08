@@ -13,6 +13,19 @@
     }
 
 
+    function scrollToAuthor() {
+        var element = document.getElementById("author-name");
+        var offset = 130; // Adjust this value as needed
+        var bodyRect = document.body.getBoundingClientRect().top;
+        var elementRect = element.getBoundingClientRect().top;
+        var scrollToPosition = elementRect - bodyRect - offset;
+
+        window.scrollTo({
+            top: scrollToPosition,
+            behavior: 'smooth'
+        });
+    }
+
     $(window).on('hashchange load', function() {
        adjustAnchor();
     });

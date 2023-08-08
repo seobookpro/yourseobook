@@ -352,7 +352,7 @@ img.brandlogoimage {
 width: auto;
   height: <?php echo $header_navigation_menu_logo_height; ?>px;
   max-height: 100%;
-  max-width: 100%;
+
   display: flex;
   padding: 0px;
   margin: 0px;
@@ -374,7 +374,7 @@ text-decoration: <?php echo $header_cta_button_text_decoration; ?>;
 display: flex;
 
 width: <?php echo $header_cta_button_width; ?>px !important;
-
+min-width: 100px;
 height: <?php echo $header_cta_button_height; ?>px !important;
 
 padding: <?php echo $header_cta_button_padding_top; ?>px <?php echo $header_cta_button_padding_right; ?>px <?php echo $header_cta_button_padding_bottom; ?>px <?php echo $header_cta_button_padding_left; ?>px;
@@ -545,7 +545,8 @@ font-size: <?php echo $main_land_above_the_fold_text_fs; ?>px;
 }
 
 div#search-bar-master {
-	margin: 0px 45px 0px 0px;
+	margin: 0px 15px 0px 15px;
+                    max-width: 220px;   
 }
 
 .header-nav-menu-search-box.search-form, .gsc-control-cse.gsc-control-cse-bg {

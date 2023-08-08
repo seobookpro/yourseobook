@@ -19,3 +19,6 @@
   if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
   else window.addEventListener('load', loadDeferredStyles);
 </script>
+
+
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="seobookpro" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting the Buy SEO Book PRO a Coffee Widget!We are incredibly grateful for your interest and support in our SEO Book PRO project.Thank you for being a part of our journey!Warm regards,Dimitar Krumov CEO at SEO Book PRO" data-color="#FF813F" data-position="Left" data-x_margin="0" data-y_margin="0"></script>
