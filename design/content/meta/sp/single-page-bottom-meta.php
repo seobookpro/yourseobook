@@ -3,30 +3,34 @@
 <div class="container">
 
 
-<div class="row" id="sp-bottom-metas">
+<div class="row">
 
 
-<div class="col col-sm-2 col-md-2">
-
-<time datetime="<?php echo get_the_date('l F j, Y'); ?>" itemprop="datePublished"><span class="dashicons dashicons-calendar-alt"></span> <?php echo get_the_date(); ?></time>
+<div class="meta-date">
+<small>
+Date Originally Published <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><span class="dashicons dashicons-calendar-alt"></span> <?php $post_date = get_the_date( 'l F j, Y' ); echo $post_date;?></time> by <span role="contentinfo" rel="author" class="top-meta-author" aria-label="Author Name" title="<?php echo get_the_author_meta( 'display_name' ); ?> | <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+    <img src="https://yourseobook.com/wp-content/uploads/2023/07/mandalorian-e1688424450569.jpg" alt="Member  <?php echo get_the_author_meta( 'display_name' );?>" title="<?php echo get_the_author_meta( 'display_name' );?> - <?php // echo esc_html_e( get_theme_mod( 'blankseo_general_brand_name_text_control' ) ); ?>" width="30" height="30" class="bd-placeholder-img rounded-circle" loading="lazy"/>
+ <?php echo get_the_author_meta( 'display_name' ); ?>
+</span> | Last  Modified on <time datetime="<?php echo get_the_modified_date( 'l F j, Y' ); ?>" itemprop="dateModified">
+<?php echo get_the_modified_date( 'l F j, Y' ); ?></time> | <span class="dashicons dashicons-clock"></span> <?php echo calculate_reading_time(); ?>
+</small>
 
 </div>
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-clock"></span> <?php echo calculate_reading_time(); ?></div>
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-admin-comments"></span> <a href="#comment-section" title="10 Comments" role="contentinfo" rel="me">10 Comments</a></div>
+<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-admin-comments"></span> <a href="#comment-section" title="10 Comments" role="contentinfo" rel="me">10</a></div>
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-chart-line"></span> <?php echo yourseobook_get_post_views(get_the_ID());?></div>
+<div class="col col-sm-2 col-md-2"><?php echo yourseobook_get_post_views(get_the_ID());?></div>
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-admin-users"></span> <a href="#" role="link" rel="author" aria-label="Website Author">Username</a></div>
+
 
 
 
@@ -34,6 +38,22 @@
 
 </div>
 <style>
+.meta-date {
+	display: flex;
+	line-height: 1.75rem;
+	width: 100%;
+	background: #000;
+	color: #fff;
+	font-size: 14px;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 0px 20px 0px;
+}
+
+.meta-date span.dashicons.dashicons-calendar-alt {
+	font-size: 16px;
+	line-height: 1.55rem;
+	padding: 0px;
+}
 div#sp-bottom-metas {
 	font-size: 14px;
 	display: inline-block;
@@ -71,5 +91,6 @@ div#sp-bottom-metas .col.col-sm-2.col-md-2 span.dashicons {
 }
 
 </style>
+<div id="sp-bottom-metas"></div>
 <?php endif; ?>
 

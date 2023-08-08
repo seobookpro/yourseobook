@@ -85,18 +85,81 @@
 <a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" role="link" type="link" rel="bookmark" class="footer-<?php echo esc_html_e( get_theme_mod( 'yourseobook_main_brand_name_text_control' ) ); ?>" id="fm-<?php echo esc_html_e( get_theme_mod( 'yourseobook_main_brand_name_text_control' ) ); ?>">
 <span class="footer-brand-text"><?php echo esc_html_e( get_theme_mod( 'yourseobook_main_brand_name_text_control' ) ); ?></span>
 </a>. All rights reserved.</div>
-   
+   <style>
+      .libutton {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 7px;
+        text-align: center;
+        outline: none;
+        text-decoration: none !important;
+        color: #ffffff !important;
+        width: 200px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #0A66C2;
+        font-family: "SF Pro Text", Helvetica, sans-serif;
+      }
+    </style>
+<a class="libutton" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=6937108809131687936" target="_blank">Subscribe on LinkedIn</a>
+<a class="libutton" href="https://www.linkedin.com/pulse/seo-book-pro-advanced-custom-wordpress-theme-from-scratch-krumov" target="_blank">Latest 3d Edition</a>
+
 <?php endif; ?>
+    <!--   <div class="footer-social-media-links">
+     
 
-      <div class="nav justify-content-center border-bottom pb-3 mb-3">
+<div class="social">
+<?php // echo yourseobook_get_social_media(); ?>
+</div>
+ <?php // wp_nav_menu( array( 'theme_location'    => 'footer_social_media_links_menu') ); ?>
 
- <?php wp_nav_menu( array( 'theme_location'    => 'footer_main_menu') ); ?>
-
-      </div>
+      </div> -->
 
     </div>
 <?php endif; ?>
 
-  </footer>
+<!-- Start Footer Boottom Brand Navigation Custom Menu -->
+
+<?php if ( get_theme_mod( 'yourseobook_footer_bottom_brand_navigation_menus_display_control' ) ) : ?>
+
+
+
+<div id="fbtms">
+<?php
+wp_nav_menu(array(
+  'theme_location' => 'footer_copy_info_menu', // Use the location of the menu you want to display
+  'menu_id' => 'ffmyNavbar', // Replace with the custom ID assigned to the menu
+  'menu_class' => 'ffnavbar', // Add your custom class
+));
+?>
+  <a href="javascript:void(0);" style="font-size:15px;" class="fficon" onclick="ffmyFunction()">&#9776;</a>
+</div>
+
+<script>
+function ffmyFunction() {
+  var x = document.getElementById("ffmyNavbar");
+  if (x.className === "ffnavbar") {
+    x.className += "ffresponsive";
+  } else {
+    x.className = "ffnavbar";
+  }
+}
+</script>
+
+
+<?php endif; ?>
+<!-- End Footer Boottom Brand Navigation Custom Menu -->
+      <div class="footer-social-media-links">
+
+
+
+<div class="social">
+<?php echo yourseobook_get_social_media(); ?>
+</div>
+ <?php // wp_nav_menu( array( 'theme_location'    => 'footer_social_media_links_menu') ); ?>
+
+      </div>
+</footer>
 </div>
 </div>

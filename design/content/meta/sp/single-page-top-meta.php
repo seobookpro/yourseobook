@@ -26,15 +26,21 @@
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-admin-comments"></span> <a href="#comment-section" title="10 Comments" role="contentinfo" rel="me">10 Comments</a></div>
+<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-admin-comments"></span> <a href="#comment-section" title="10 Comments" role="contentinfo" rel="me">10</a></div>
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-chart-line"></span> <?php echo yourseobook_get_post_views(get_the_ID());?></div>
+<div class="col col-sm-2 col-md-2"><?php echo yourseobook_get_post_views(get_the_ID());?></div>
 
 
 
-<div class="col col-sm-2 col-md-2"><span class="dashicons dashicons-admin-users"></span> <a href="#" role="link" rel="author" aria-label="Website Author">Username</a></div>
+<div class="col col-sm-2 col-md-2">
+
+<a  href="#author-name" onclick="scrollToAuthor()" role="link" rel="author" class="top-meta-author" aria-label="Author Name" title="<?php echo get_the_author_meta( 'display_name' ); ?> | <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+    <img src="https://yourseobook.com/wp-content/uploads/2023/07/mandalorian-e1688424450569.jpg" alt="Member  <?php echo get_the_author_meta( 'display_name' );?>" title="<?php echo get_the_author_meta( 'display_name' );?> - <?php // echo esc_html_e( get_theme_mod( 'blankseo_general_brand_name_text_control' ) ); ?>" width="30" height="30" class="bd-placeholder-img rounded-circle" loading="eager"/>
+ <?php echo get_the_author_meta( 'display_name' ); ?>
+</a>
+</div>
 
 
 

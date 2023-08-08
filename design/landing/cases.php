@@ -1,6 +1,6 @@
 <?php if ( get_theme_mod( 'yourseobook_main_land_our_case_studies_display_control' ) ) : ?>
 
-<div class="container-fluid" style="background:#FFF;">
+<div class="container-fluid" style="background-color: #02b159;background-image: linear-gradient(to bottom right, #2f6f4e, #02b159);color: #000;margin: 120px 0px 120px 0px;box-shadow: 0px 50px 40px -20px #1b422e;padding:160px 20px 160px 20px;">
 <div class="container">
   <div class="row align-items-center ms-auto ourcases" style="margin:40px 0px 40px 0px;padding:40px 20px 40px 20px;">
 

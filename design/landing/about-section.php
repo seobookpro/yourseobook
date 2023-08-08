@@ -1,7 +1,7 @@
 <?php if ( get_theme_mod( 'yourseobook_main_land_about_us_display_control' ) ) : ?>
 
-<div class="container-fluid" id="aboutus">
 
+<div class="container-fluid" id="aboutus" style="background-color: #cedc39;background-image: linear-gradient(to bottom right, #ffeb3b, #b32e05);color: #000;margin: auto 0px 120px 0px;box-shadow: 0px 50px 40px -20px #1b422e;padding:160px 20px 160px 20px;">
 <div class="container col-xxl-8 px-4 py-5">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5 land-about">
 
@@ -21,7 +21,12 @@
  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button>
           <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact us</button>
-       
+<hr>
+<small style="color: #c63306; font-size: 14px; border-bottom: 1px solid #c63306; margin: 0px 0px 10px 0px; text-decoration: none!important;">★ ★ ★ ★ ★ <strong>Rating: 5.0 · ‎45 votes</strong></small>
+<hr>
+       <?php if ( get_theme_mod( 'social_newtab' ) ) : ?>
+       Follow us on: <?php echo yourseobook_get_social_media(); ?>
+       <?php endif; ?>
  </div>
 
       </div>

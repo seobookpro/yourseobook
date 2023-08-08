@@ -1,6 +1,16 @@
 <?php if ( get_theme_mod( 'yourseobook_main_land_below_the_fold_display_control' ) ) : ?>
 
+<div id="prebuild-layouts" class="container-fluid" style="background-color: #cedc39;background-image: linear-gradient(to bottom right, #ffeb3b, #b32e05);color: #000;margin: auto 0px 60px 0px;box-shadow: 0px 50px 40px -20px #1b422e;padding:60px 20px 60px 20px;">
+<?php
+$selected_layout = get_theme_mod('yourseobook_landing_below_the_fold_prebuild_layouts_settings_controller', 'landing-centered-hero');
 
+if ($selected_layout) {
+    $layout_template = 'api/layouts/landing/above-the-fold/' . $selected_layout;
+    get_template_part($layout_template);
+}
+// /wp-content/themes/yourseobook/api/layouts/landing/above-the-fold/landing-centered-hero.php
+?>
+</div>
 
 <div id="btf-main" class="container-fluid below-the-fold-master">
 
@@ -42,3 +52,6 @@
   </div>
   </div>
 <?php endif; ?>
+
+
+<!-- yourseobook_landing_below_the_fold_prebuild_layouts_settings_controller -->

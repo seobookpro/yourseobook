@@ -6,9 +6,9 @@
 
                   <div class="nav nav-pills">
 
-<a class="nav-link" href="#" title="">Jump Link 1</a>
-<a class="nav-link" href="#" title="">Jump Link 2</a>
-<a class="nav-link" href="#" title="">Jump Link 3</a>
+<a class="nav-link" href="#landing-atf" title="">Above The Fold</a>
+<a class="nav-link" href="#landing-btf" title="">Jump Link 2</a>
+<a class="nav-link" href="#landing-about" title="">Jump Link 3</a>
 <a class="nav-link" href="#" title="">Jump Link 4</a>
 <a class="nav-link" href="#" title="">Jump Link 5</a>
 <a class="nav-link" href="#" title="">Jump Link 6</a>
@@ -31,14 +31,14 @@
                 <script>
 
                 $(function() {
-                    var header = $(".jump-links");
+                    var nav = $(".jump-links");
                     $(window).scroll(function() {
                         var scroll = $(window).scrollTop();
 
                         if (scroll >= 500) {
-                            header.removeClass('header').addClass("header-alt");
+                            nav.removeClass('header').addClass("header-alt");
                         } else {
-                            header.removeClass("header-alt").addClass('header');
+                            nav.removeClass("header-alt").addClass('header');
                         }
                     });
                 });
@@ -47,3 +47,4 @@
 
 
                 </script>
+
